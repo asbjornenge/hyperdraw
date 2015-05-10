@@ -1,9 +1,11 @@
 {
   "name": "@asbjornenge/hyperdraw",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
-  "bin": "./cli.js",
+  "bin": {
+    "hyperdraw" : "./cli.js"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
