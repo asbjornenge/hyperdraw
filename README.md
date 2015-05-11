@@ -16,6 +16,10 @@ hyperdraw --color green
 
 ## Changelog
 
+### 1.0.2
+
+* Added some missing meta info
+
 ### 1.0.0
 
 * Initial release :tada:
