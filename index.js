@@ -1,8 +1,9 @@
 var blessed = require('blessed')
-var hswarm  = require('hyperswarm')('hyperdraw')
+var hyperswarm = require('hyperswarm')
 
-module.exports = function(color) {
-    var mycolor = color || require('randomcolor')({
+module.exports = function(opts) {
+    var hswarm  = hyperswarm('hyperdraw', opts)
+    var mycolor = opts.color || require('randomcolor')({
         luminosity : 'random',
         hue : 'random'
     })
@@ -47,7 +48,9 @@ module.exports = function(color) {
 
     screen.append(box)
     screen.key(['escape', 'q', 'C-c'], function(ch, key) {
-      return process.exit(0);
+      hswarm.close()
+      setTimeout(function() { process.exit(0) }, 100) 
+      return
     });
     box.focus();
     screen.render();
