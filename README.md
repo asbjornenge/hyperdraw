@@ -16,6 +16,10 @@ hyperdraw --color green
 
 ## Changelog
 
+### 1.0.3
+
+* Allow passing --host cli param
+
 ### 1.0.2
 
 * Added some missing meta info
